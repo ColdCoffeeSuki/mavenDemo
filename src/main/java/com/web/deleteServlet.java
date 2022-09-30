@@ -14,7 +14,7 @@ public class deleteServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //1.Ú¾Id
+        //1.æ¥æ”¶Id
         String id = request.getParameter("id");
         Brand brand = service.selectById(Integer.parseInt(id));
         service.delete(brand);

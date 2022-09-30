@@ -14,13 +14,13 @@ public class selectByIdServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //1.Ú¾Id
+        //1.æ¥æ”¶Id
         String id = request.getParameter("id");
-        //2.’²—pservice¸æm
+        //2.èª¿ç”¨serviceæŸ»è©¢
         Brand brand = service.selectById(Integer.parseInt(id));
-        //3.‘¶–×“request
+        //3.å­˜å„²åˆ°request
         request.setAttribute("brand", brand);
-        //4.çzá¢“update.jsp
+        //4.è½‰ç™¼åˆ°update.jsp
         request.getRequestDispatcher("/update.jsp").forward(request, response);
 
     }

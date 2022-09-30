@@ -19,10 +19,10 @@ public class signupServlet extends HttpServlet {
         User user = new User(null, username, password);
         boolean signupFlag = service.signup(user);
         if(signupFlag){
-            request.setAttribute("signup_msg", "’û¬Œ÷");
+            request.setAttribute("signup_msg", "æ³¨å†ŠæˆåŠŸ");
             request.getRequestDispatcher("/login.jsp").forward(request, response);
         }else {
-            request.setAttribute("signup_msg", "—pŒË–¼›ß‘¶İ");
+            request.setAttribute("signup_msg", "ç”¨æˆ¸åå·²å­˜åœ¨");
             request.getRequestDispatcher("/signup.jsp").forward(request, response);
 
         }

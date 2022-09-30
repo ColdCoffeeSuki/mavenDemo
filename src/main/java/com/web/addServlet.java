@@ -15,7 +15,7 @@ public class addServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
-        //1.Ú¾•\šd’ñŒğ“IÉŸC••åäˆ×ˆêŒÂBrand›”Û
+        //1.æ¥æ”¶è¡¨å–®æäº¤çš„æ•¸æ“šï¼Œå°è£ç‚ºä¸€å€‹Brandå°è±¡
         String brandName = request.getParameter("brandName");
         String companyName = request.getParameter("companyName");
         String ordered = request.getParameter("ordered");
@@ -29,10 +29,10 @@ public class addServlet extends HttpServlet {
         brand.setDescription(description);
         brand.setStatus(Integer.parseInt(status));
 
-        //2.’²—pserviceŠ®¬“Y‰Á
+        //2.èª¿ç”¨serviceå®Œæˆæ·»åŠ 
         service.add(brand);
 
-        //3.çzá¢“¸æmŠ—L“IServlet
+        //3.è½‰ç™¼åˆ°æŸ»è©¢æ‰€æœ‰çš„Servlet
         request.getRequestDispatcher("/selectAllServlet").forward(request,response);
     }
 

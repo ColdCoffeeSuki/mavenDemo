@@ -6,7 +6,6 @@ import com.service.UserService;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-import javax.xml.ws.Service;
 import java.io.IOException;
 
 @WebServlet("/loginServlet")

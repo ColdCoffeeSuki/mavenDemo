@@ -5,6 +5,7 @@
 <configuration>
     <!--起別名 -->
     <typeAliases>
+<!--        MyBatis 将扫描该包里面的类，将其第一个字母变为小写作为其别名，例如 Student 别名为 student-->
         <package name="com.pojo"/>
     </typeAliases>
 
@@ -13,13 +14,13 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/db_test"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mavenDemo"/>
                 <property name="username" value="root"/>
                 <property name="password" value="${password}"/> <!--Change ${password} to your real password-->
             </dataSource>
         </environment>
     </environments>
-    <mappers>
+    <mappers><!--用于指定 MyBatis SQL 映射文件的路径。-->
         <!--包掃描-->
         <package name="com.Dao"/>
     </mappers>
